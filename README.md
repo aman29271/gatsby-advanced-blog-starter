@@ -1,2 +1,2 @@
 # gatsby-bootcamp-project
-My Blog
+My Simple blog site with gatsby 
