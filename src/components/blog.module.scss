@@ -1,0 +1,21 @@
+
+.posts{
+    list-style-type: none;
+    margin: 0px;
+}
+.post{
+    margin: .8rem 0;
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        background: #4f4f4f;
+    }
+    a:active{
+        color: #9f9f9f;
+    }
+    p{
+        font-style: italic;
+        font-size: .8rem;
+    }
+}
