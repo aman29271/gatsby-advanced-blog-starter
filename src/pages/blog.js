@@ -23,14 +23,14 @@ const BlogPage = () =>{
     return(
         <Layout>
         <div>
-            <h1>Blog</h1>
-            <p>Post will appear Here later on.</p>
+            <h2>Articles</h2>
+            {/* <p>Post will appear Here later on.</p> */}
             <ul className={blogStyles.posts}>
             {data.allMarkdownRemark.edges.map((edge) => {
                 return (
                     <li className={blogStyles.post}>
                         <Link to={`/blog/${edge.node.fields.slug}`}>
-                        <h2>{edge.node.frontmatter.title}</h2>
+                        <h3>{edge.node.frontmatter.title}</h3>
                         <p>{edge.node.frontmatter.date}</p>
                         </Link>
                     </li>

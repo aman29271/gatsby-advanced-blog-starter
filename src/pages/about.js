@@ -4,8 +4,8 @@ const Aboutpage = () =>{
     return(
         <Layout>
         <div>
-            <h1>Hi ! I am AMAN</h1>
-            <p>A 3rd Year B.tech Student at IIT Patna.</p>
+            <h2>About me</h2>
+            <p>Hi ! I am Aman Kumar. A 3rd Year B.tech Student at IIT Patna.</p>
             <p>Pursuing Civil Engineering and a web enthusiast</p>
         </div>
         </Layout>

@@ -8,7 +8,11 @@ module.exports = {
   /* Your site config here */
   siteMetadata:{
     title:'An Amazing Blog ',
-    author:'Aman Kumar'
+    author:'Aman Kumar',
+    Email:'aman29271@gmail.com',
+    Github:'aman29271',
+    Twitter:'',
+    LinkedIn:'aman29271'
   },
   plugins:[
     'gatsby-plugin-sass',{

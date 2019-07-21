@@ -1,7 +1,5 @@
-.title{
-    text-decoration: none;
-    cursor: pointer;
-    // color: #444;
+.active_nav_list{
+    color:#000 !important;
 }
 .list{
     list-style-type: none;
@@ -17,9 +15,15 @@
         color:#666666;
     }
 }
-.active_nav_list{
-    color:#333333;
-}
+ li:first-child{
+     flex: 1 0 ;
+ }
 .container{
     padding-bottom: 50px;
+}
+.title{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.2rem;
 }
