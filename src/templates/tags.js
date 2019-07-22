@@ -21,8 +21,8 @@ return(
                 const { slug } = fields
                 return(
                     <li key={id} className={blogstyles.post}><Link to ={`/blog/${slug}`} >
-                        <h3>{title}</h3></Link>
-                        <p><span>{date}</span></p>
+                        <h3>{title}</h3>
+                        <p><span>{date}</span></p></Link>
                     </li>
                 )
             })}

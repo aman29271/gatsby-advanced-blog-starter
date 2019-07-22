@@ -1,5 +1,7 @@
 .active_nav_list{
-    color:#000 !important;
+    color:#0000EE !important;
+    border-bottom: 2px solid #0000EE;
+    
 }
 .list{
     list-style-type: none;
@@ -12,7 +14,7 @@
         
     }
     li a:hover{
-        color:#666666;
+        color:#5183f5;
     }
 }
  li:first-child{

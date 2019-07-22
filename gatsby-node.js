@@ -17,7 +17,9 @@ module.exports.createPages = async ({graphql,actions})=>{
     const blogTemplate = path.resolve(`src/templates/blog.js`)
     const res = await graphql(`
     query{
-        allMarkdownRemark{
+        allMarkdownRemark(
+            filter: { fields: { draft: { eq: false } } }
+        ){
             edges{
                 node{
                     fields{
@@ -36,20 +38,22 @@ module.exports.createPages = async ({graphql,actions})=>{
             const posts = res.data.allMarkdownRemark.edges
             posts.forEach((post)=>{
                 const {slug } = post.node.fields
-                const {tags} = post.node.frontmatter
-                createPage({
-                    component:blogTemplate,
-                    path:`/blog/${slug}`,
-                    context:{
-                        slug
-                    }
-                })
-                if(tags){
-                    // console.log('@@@@@',tags)
-                    // tags.forEach((tag)=>{
-                        tagSet.add(tags);
-                    // })
-                }
+                const {tags,draft} = post.node.frontmatter
+                // if(draft == false | draft ==''){
+                    createPage({
+                        component:blogTemplate,
+                        path:`/blog/${slug}`,
+                        context:{
+                            slug
+                        }
+                    })
+                    if(tags){
+                        // console.log('@@@@@',tags)
+                        // tags.forEach((tag)=>{
+                            tagSet.add(tags);
+                        // })
+                    }    
+                // }
             })
             
                 tagArray = Array.from(tagSet)

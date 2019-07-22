@@ -26,7 +26,7 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },{
+    },'gatsby-plugin-draft',{
       resolve:`gatsby-transformer-remark`,
       options:{
         plugins:[

@@ -2,11 +2,11 @@
 title: "Gatsby Bootcamp"
 date: "2019-07-17"
 tags: "api"
-template: "advanced"
+draft: true
 ---
 I just launched a new Bootcamp
 
-![Nature](./shutterstock_1.jpg)
+![Nature](../../content/images/shutterstock_1.jpg)
 
 ## Topics Covered
 
