@@ -21,7 +21,12 @@ module.exports = {
         name:`posts`,
         path:`${__dirname}/src/posts`
       }
-    },'gatsby-plugin-sharp',{
+    },{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `content`,
+      }},'gatsby-plugin-sharp',{
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
@@ -30,7 +35,7 @@ module.exports = {
       resolve:`gatsby-transformer-remark`,
       options:{
         plugins:[
-          'gatsby-remark-relative-images',
+          'gatsby-remark-relative-images','gatsby-remark-prismjs',
           {
             resolve:`gatsby-remark-images`,
             options:{

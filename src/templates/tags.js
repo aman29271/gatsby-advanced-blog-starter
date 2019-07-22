@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import blogstyles from '../components/modules/blog.module.scss'
+import blogstyles from '../components/modules/posts.module.scss'
 import { Link,graphql } from 'gatsby'
 
 const tagPage = ({data,pageContext})=>{
@@ -22,7 +22,7 @@ return(
                 return(
                     <li key={id} className={blogstyles.post}><Link to ={`/blog/${slug}`} >
                         <h3>{title}</h3>
-                        <p><span>{date}</span></p></Link>
+                        <p><span className={blogstyles.date}>{date}</span></p></Link>
                     </li>
                 )
             })}

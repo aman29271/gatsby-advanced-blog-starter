@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql,useStaticQuery,Link} from 'gatsby'
-import blogStyles from '../components/modules/blog.module.scss'
+import blogStyles from '../components/modules/posts.module.scss'
 import Helmet from 'react-helmet'
 import config from '../../data/siteConfig'
 const BlogPage = () =>{
@@ -35,7 +35,7 @@ const BlogPage = () =>{
                     <li className={blogStyles.post} key={edge.node.id}>
                         <Link to={`/blog/${edge.node.fields.slug}`}>
                         <h3>{edge.node.frontmatter.title}</h3>
-                        <p><span>{edge.node.frontmatter.date}</span></p>
+                        <p><span className={blogStyles.date}>{edge.node.frontmatter.date}</span></p>
                         </Link>
                     </li>
                 )
