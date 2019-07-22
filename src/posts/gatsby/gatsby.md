@@ -1,6 +1,8 @@
 ---
-title: "Gatsby Bootamp"
+title: "Gatsby Bootcamp"
 date: "2019-07-17"
+tags: "api"
+template: "advanced"
 ---
 I just launched a new Bootcamp
 

@@ -11,7 +11,7 @@ module.exports = {
     author:'Aman Kumar',
     Email:'aman29271@gmail.com',
     Github:'aman29271',
-    Twitter:'',
+    Twitter:'Aman1291aman',
     LinkedIn:'aman29271'
   },
   plugins:[
@@ -22,6 +22,11 @@ module.exports = {
         path:`${__dirname}/src/posts`
       }
     },'gatsby-plugin-sharp',{
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },{
       resolve:`gatsby-transformer-remark`,
       options:{
         plugins:[

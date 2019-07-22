@@ -1,6 +1,7 @@
 import React from 'react'
 import {graphql,useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
+import contactStyle from '../components/contact.module.scss'
  const Contact = ()=>{
      const data = useStaticQuery(graphql`
      query{
@@ -14,9 +15,9 @@ import Layout from '../components/layout'
      return(
          <Layout>
          <div>
-             <h2>Stay in touch</h2>
-             <p>You can contact me via email or find me around the web.</p>
-             <ul>
+             <h2 className={contactStyle.title}>Stay in touch</h2>
+             <p className={contactStyle.subtitle}>You can contact me via email or find me around the web.</p>
+             <ul className={contactStyle.list}>
                  <li>Email: <a href={`mailto:${data.site.siteMetadata.Email}`}>{data.site.siteMetadata.Email}</a></li>
                  <li>Github: <a href={`https://github.com/${data.site.siteMetadata.Github}`}>{data.site.siteMetadata.Github}</a></li>
                  <li>Twitter: <a href={`https://twitter.com/${data.site.siteMetadata.Twitter}`}>{data.site.siteMetadata.Twitter}</a></li>

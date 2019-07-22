@@ -8,8 +8,9 @@ const BlogPage = () =>{
         allMarkdownRemark{
             edges{
                 node{
+                    id,
                     frontmatter{
-                        title,date
+                        title,date,tags
                     },
                     fields{
                         slug
@@ -28,10 +29,10 @@ const BlogPage = () =>{
             <ul className={blogStyles.posts}>
             {data.allMarkdownRemark.edges.map((edge) => {
                 return (
-                    <li className={blogStyles.post}>
+                    <li className={blogStyles.post} key={edge.node.id}>
                         <Link to={`/blog/${edge.node.fields.slug}`}>
                         <h3>{edge.node.frontmatter.title}</h3>
-                        <p>{edge.node.frontmatter.date}</p>
+                        <p><span>{edge.node.frontmatter.date}</span></p>
                         </Link>
                     </li>
                 )

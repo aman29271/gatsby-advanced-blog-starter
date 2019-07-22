@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import {graphql} from 'gatsby'
+import {graphql,Link} from 'gatsby'
 export const query = graphql`
         query(
             $slug: String
@@ -13,17 +13,20 @@ export const query = graphql`
             }
         ){
             frontmatter{
-            title date
+            title date tags
             },html
+            
         }
         }
 `
 const Blog=(props)=>{
+    const { frontmatter, html} = props.data.markdownRemark
+    const { title,date,tags} = frontmatter
     return(
         <Layout>
-            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-            <p>{props.data.markdownRemark.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html:props.data.markdownRemark.html}}></div>
+            <h1>{title}</h1>
+            <p>{date}<Link to={`/tags/${tags}`}>{tags}</Link></p>
+            <div dangerouslySetInnerHTML={{__html:html}}></div>
         </Layout>
     )
 }

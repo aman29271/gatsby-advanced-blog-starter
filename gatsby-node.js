@@ -1,4 +1,5 @@
 const path = require('path')
+const _ = require("lodash")
 module.exports.onCreateNode = ({node,actions}) =>{
     const {createNodeField} = actions
     if(node.internal.type == 'MarkdownRemark'){
@@ -12,6 +13,7 @@ module.exports.onCreateNode = ({node,actions}) =>{
 }
 module.exports.createPages = async ({graphql,actions})=>{
     const { createPage } = actions
+    const tagTemplate = path.resolve(`src/templates/tags.js`)
     const blogTemplate = path.resolve(`src/templates/blog.js`)
     const res = await graphql(`
     query{
@@ -21,18 +23,44 @@ module.exports.createPages = async ({graphql,actions})=>{
                     fields{
                         slug
                     }
+                    frontmatter{
+                        tags
+                    }
                 }
             }
         }
     }
     `)
-    res.data.allMarkdownRemark.edges.forEach((edge)=>{
-        createPage({
-            component:blogTemplate,
-            path:`/blog/${edge.node.fields.slug}`,
-            context:{
-                slug: edge.node.fields.slug
-            }
-        })
-    })
+            
+              tagSet = new Set();
+            const posts = res.data.allMarkdownRemark.edges
+            posts.forEach((post)=>{
+                const {slug } = post.node.fields
+                const {tags} = post.node.frontmatter
+                createPage({
+                    component:blogTemplate,
+                    path:`/blog/${slug}`,
+                    context:{
+                        slug
+                    }
+                })
+                if(tags){
+                    // console.log('@@@@@',tags)
+                    // tags.forEach((tag)=>{
+                        tagSet.add(tags);
+                    // })
+                }
+            })
+            
+                tagArray = Array.from(tagSet)
+              tagArray.forEach((tag)=>{
+                createPage({
+                    component:tagTemplate,
+                    path: `/tags/${_.kebabCase(tag)}`,
+                    context:{
+                        tag
+                    }
+                })
+            })
+    
 }
