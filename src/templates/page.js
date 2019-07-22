@@ -28,7 +28,12 @@ const Blog=(props)=>{
         <Layout>
             <Helmet title={title}/>
             <h1>{title}</h1>
-            <p><span className={postStyles.date}>{date}</span><Link to={`/tags/${tags}`}><span className={postStyles.tag}>{tags}</span></Link></p>
+            <p><span className={postStyles.date}>{date}</span>
+            {tags.map((tag,index)=>{
+                return(
+                    <Link to={`/tags/${tag}`} key={index}><span className={postStyles.tag}>{tag}</span></Link>
+                )
+            })}</p>
             <div dangerouslySetInnerHTML={{__html:html}}></div>
         </Layout>
     )

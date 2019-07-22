@@ -1,8 +1,10 @@
 ---
 title: "Gatsby Bootcamp"
-date: 2019-07-17
-tags: "api"
+date: 2019-07-17T12:38:45
 draft: false
+tags:
+    - "api"
+    - "javascript"
 ---
 I just launched a new Bootcamp
 

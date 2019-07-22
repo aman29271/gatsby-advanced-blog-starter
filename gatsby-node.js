@@ -38,8 +38,7 @@ module.exports.createPages = async ({graphql,actions})=>{
             const posts = res.data.allMarkdownRemark.edges
             posts.forEach((post)=>{
                 const {slug } = post.node.fields
-                const {tags,draft} = post.node.frontmatter
-                // if(draft == false | draft ==''){
+                const {tags} = post.node.frontmatter
                     createPage({
                         component:blogTemplate,
                         path:`/blog/${slug}`,
@@ -48,10 +47,9 @@ module.exports.createPages = async ({graphql,actions})=>{
                         }
                     })
                     if(tags){
-                        // console.log('@@@@@',tags)
-                        // tags.forEach((tag)=>{
-                            tagSet.add(tags);
-                        // })
+                        tags.forEach((tag)=>{
+                            tagSet.add(tag);
+                        })
                     }    
                 // }
             })
