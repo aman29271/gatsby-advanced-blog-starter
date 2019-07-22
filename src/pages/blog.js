@@ -1,7 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql,useStaticQuery,Link} from 'gatsby'
-import blogStyles from '../components/blog.module.scss'
+import blogStyles from '../components/modules/blog.module.scss'
+import Helmet from 'react-helmet'
+import config from '../../data/siteConfig'
 const BlogPage = () =>{
     const data = useStaticQuery(graphql`
     query{
@@ -23,6 +25,7 @@ const BlogPage = () =>{
     // console.log(data);
     return(
         <Layout>
+            <Helmet title={`Articles - ${config.userName}`}/>
         <div>
             <h2>Articles</h2>
             {/* <p>Post will appear Here later on.</p> */}

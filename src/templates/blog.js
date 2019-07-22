@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql,Link} from 'gatsby'
-import postStyles from '../components/post.module.scss'
+import postStyles from '../components/modules/post.module.scss'
+import Helmet from 'react-helmet'
 export const query = graphql`
         query(
             $slug: String
@@ -25,6 +26,7 @@ const Blog=(props)=>{
     const { title,date,tags} = frontmatter
     return(
         <Layout>
+            <Helmet title={title}/>
             <h1>{title}</h1>
             <p><span className={postStyles.date}>{date}</span><Link to={`/tags/${tags}`}><span className={postStyles.tag}>{tags}</span></Link></p>
             <div dangerouslySetInnerHTML={{__html:html}}></div>

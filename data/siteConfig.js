@@ -1,5 +1,6 @@
 const config = {
     siteTitle: "Aman Kumar | A web developer", // Site title.
+    siteShortDesc: "Aman Kumar Web developer",
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
     siteUrl: "", // Domain of your website without pathPrefix.
     siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
@@ -18,18 +19,15 @@ const config = {
     userLinks: [
       {
         label: "GitHub",
-        username: "aman29271",
+        username: "https://github.com/aman29271",
       },
       {
         label: "Twitter",
-        username: "Aman1291aman",
+        username: "https://twitter.com/Aman1291aman",
       },
-      {
-        label: "Email",
-        url: "mailto:vagr9k@gmail.com",
-      },{
+     {
           label: "LinkedIn",
-          username: "aman29271",
+          username: "https://linkedin.com/in/aman29271",
       }
     ],
     copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.

@@ -1,7 +1,7 @@
 import React from "react"
 // import  'bulma/bulma.sass'
 import { Link,graphql,useStaticQuery } from 'gatsby'
-import headerStyles from './header.module.scss'
+import headerStyles from './modules/header.module.scss'
 const Header = () => {
     const data = useStaticQuery(graphql`
     query{

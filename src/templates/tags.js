@@ -1,13 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import blogstyles from '../components/blog.module.scss'
+import blogstyles from '../components/modules/blog.module.scss'
 import { Link,graphql } from 'gatsby'
 
 const tagPage = ({data,pageContext})=>{
     const { tag } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
-    const tagHeader = `${totalCount} post${
+    const tagHeader = `${totalCount} Post${
         totalCount === 1 ? "" : "s"
       } tagged with ${tag}`
 return(
