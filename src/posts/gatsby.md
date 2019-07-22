@@ -1,6 +1,6 @@
 ---
 title: "Gatsby Bootcamp"
-date: "2019-07-17"
+date: 2019-07-17
 tags: "api"
 draft: true
 ---

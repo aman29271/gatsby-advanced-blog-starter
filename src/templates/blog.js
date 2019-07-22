@@ -15,7 +15,7 @@ export const query = graphql`
             }
         ){
             frontmatter{
-            title date tags
+            title date(formatString:"dddd, Mo MMMM YYYY") tags
             },html
             
         }

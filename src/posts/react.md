@@ -1,6 +1,6 @@
 ---
 title: "React Tutorial"
-date: "2019-07-17"
+date: 2019-07-17
 template: "new"
 tags: "javascript"
 ---
