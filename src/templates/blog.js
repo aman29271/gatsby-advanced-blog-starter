@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql,Link} from 'gatsby'
+import postStyles from '../components/post.module.scss'
 export const query = graphql`
         query(
             $slug: String
@@ -25,7 +26,7 @@ const Blog=(props)=>{
     return(
         <Layout>
             <h1>{title}</h1>
-            <p>{date}<Link to={`/tags/${tags}`}>{tags}</Link></p>
+            <p><span className={postStyles.date}>{date}</span><Link to={`/tags/${tags}`}><span className={postStyles.tag}>{tags}</span></Link></p>
             <div dangerouslySetInnerHTML={{__html:html}}></div>
         </Layout>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import blogstyles from '../components/blog.module.scss'
 import { Link,graphql } from 'gatsby'
 
 const tagPage = ({data,pageContext})=>{
@@ -8,20 +9,20 @@ const tagPage = ({data,pageContext})=>{
     const { edges, totalCount } = data.allMarkdownRemark
     const tagHeader = `${totalCount} post${
         totalCount === 1 ? "" : "s"
-      } tagged with "${tag}"`
+      } tagged with ${tag}`
 return(
     <Layout>
         <Helmet title={tagHeader}></Helmet>
-        <h2>{tagHeader}</h2>
-        <ul>
+        <h2 className={blogstyles.title}>{tagHeader}</h2>
+        <ul className={blogstyles.posts}>
             {edges.map(({node}) => {
                 const {frontmatter,fields,id} = node
-                const { title,date,tags} = frontmatter
+                const { title,date} = frontmatter
                 const { slug } = fields
                 return(
-                    <li key={id}><Link to ={`/blog/${slug}`} >
+                    <li key={id} className={blogstyles.post}><Link to ={`/blog/${slug}`} >
                         <h3>{title}</h3></Link>
-                        <p><span>{date}</span><span>{tags}</span></p>
+                        <p><span>{date}</span></p>
                     </li>
                 )
             })}
@@ -43,7 +44,7 @@ query($tag : String){
                     slug
                 }
                 frontmatter{
-                    title,tags,date
+                    title,date
                 }
             }
         }
