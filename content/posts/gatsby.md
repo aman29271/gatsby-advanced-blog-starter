@@ -1,5 +1,6 @@
 ---
 title: "Gatsby Bootcamp"
+thumbnail: "../thumbnails/js.png"
 date: "2019-07-10"
 draft: false
 tags:
@@ -8,7 +9,7 @@ tags:
 ---
 I just launched a new Bootcamp
 
-![Nature](./shutterstock_1.jpg)
+![Nature](../images/shutterstock_1.jpg)
 
 ## Topics Covered
 

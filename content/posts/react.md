@@ -1,6 +1,7 @@
 ---
 title: "React Tutorial"
 date: 2019-07-17T01:58:30
+thumbnail: "../thumbnails/js.png"
 template: "new"
 tags:
     - "javascript"

@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import {graphql,useStaticQuery,Link} from 'gatsby'
 import blogStyles from '../components/modules/posts.module.scss'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 import config from '../../data/siteConfig'
 const BlogPage = () =>{
     const data = useStaticQuery(graphql`
@@ -14,9 +15,7 @@ const BlogPage = () =>{
             edges{
                 node{
                     id,
-                    frontmatter{
-                        title,date(formatString:"ddd, Do MMMM YYYY"),tags
-                    },
+                    ...FrontmatterFragmentBlog,
                     fields{
                         slug
                     }
@@ -25,7 +24,8 @@ const BlogPage = () =>{
         }
     }
     `)
-    // console.log(data);
+    const {edges} = data.allMarkdownRemark
+    // console.log(edges)
     return(
         <Layout>
             <Helmet title={`Articles - ${config.userName}`}/>
@@ -33,12 +33,18 @@ const BlogPage = () =>{
             <h2>Articles</h2>
             {/* <p>Post will appear Here later on.</p> */}
             <ul className={blogStyles.posts}>
-            {data.allMarkdownRemark.edges.map((edge) => {
+            {edges.map(({node}) => {
+                const { id,frontmatter,fields} = node
+                const {title,date,thumbnail} = frontmatter
+                const {slug} = fields
                 return (
-                    <li className={blogStyles.post} key={edge.node.id}>
-                        <Link to={`/blog/${edge.node.fields.slug}`}>
-                        <h3>{edge.node.frontmatter.title}</h3>
-                        <p><span className={blogStyles.date}>{edge.node.frontmatter.date}</span></p>
+                    <li className={blogStyles.post} key={id}>
+                        <Link to={`/blog/${slug}`} className={blogStyles.content_wrapper}>
+                            { thumbnail ? <Img fixed={thumbnail.childImageSharp.fixed}/> : null}
+                            <div className={blogStyles.content}>
+                            <h3>{title}</h3>
+                        <p><span className={blogStyles.date}>{date}</span></p>
+                            </div>
                         </Link>
                     </li>
                 )

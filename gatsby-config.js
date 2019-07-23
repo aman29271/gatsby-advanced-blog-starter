@@ -15,23 +15,21 @@ module.exports = {
     LinkedIn:'aman29271'
   },
   plugins:[
-    'gatsby-plugin-sass',{
-      resolve:`gatsby-source-filesystem`,
-      options:{
-        name:`posts`,
-        path:`${__dirname}/src/posts`
-      }
-    },{
+    'gatsby-plugin-sass',
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/`,
         name: `content`,
-      }},'gatsby-plugin-sharp',{
+      }},
+      {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },'gatsby-plugin-draft',{
+    },
+    'gatsby-plugin-draft',
+    {
       resolve:`gatsby-transformer-remark`,
       options:{
         plugins:[
@@ -45,6 +43,9 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+
   ]
 }
