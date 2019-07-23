@@ -409,7 +409,7 @@ html {
     border-radius: 3px;
     overflow: auto;
     word-wrap: normal;
-    padding: 1.45rem;
+    padding: 0rem !important;
   }
   table {
     margin-left: 0;
@@ -484,9 +484,9 @@ html {
     padding-right: 0;
     padding-top: 0;
     margin-bottom: calc(1.45rem - 1px);
-    background: hsla(0, 0%, 0%, 0.2);
+    background: #ebebeb;
     border: none;
-    height: 1px;
+    height: 2px;
   }
   address {
     margin-left: 0;

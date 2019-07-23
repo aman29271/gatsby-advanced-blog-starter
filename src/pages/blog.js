@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql,useStaticQuery,Link} from 'gatsby'
-import blogStyles from '../components/modules/posts.module.scss'
+import  '../components/modules/posts.scss'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import config from '../../data/siteConfig'
@@ -32,18 +32,18 @@ const BlogPage = () =>{
         <div>
             <h2>Articles</h2>
             {/* <p>Post will appear Here later on.</p> */}
-            <ul className={blogStyles.posts}>
+            <ul className={`posts`}>
             {edges.map(({node}) => {
                 const { id,frontmatter,fields} = node
                 const {title,date,thumbnail} = frontmatter
                 const {slug} = fields
                 return (
-                    <li className={blogStyles.post} key={id}>
-                        <Link to={`/blog/${slug}`} className={blogStyles.content_wrapper}>
+                    <li className={`post`} key={id}>
+                        <Link to={`/blog/${slug}`} className={`content_wrapper`}>
                             { thumbnail ? <Img fixed={thumbnail.childImageSharp.fixed}/> : null}
-                            <div className={blogStyles.content}>
+                            <div className={`content`}>
                             <h3>{title}</h3>
-                        <p><span className={blogStyles.date}>{date}</span></p>
+                        <p><span className={`date`}>{date}</span></p>
                             </div>
                         </Link>
                     </li>

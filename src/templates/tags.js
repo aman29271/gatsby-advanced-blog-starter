@@ -1,32 +1,32 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import blogstyles from '../components/modules/posts.module.scss'
+import  '../components/modules/posts.scss'
 import { Link,graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const tagPage = ({data,pageContext})=>{
     const { tag } = pageContext
     const { edges, totalCount } = data.allMarkdownRemark
-    const tagHeader = `${totalCount} Post${
+    const tagHeader = `Post${
         totalCount === 1 ? "" : "s"
       } tagged with `
 return(
     <Layout>
         <Helmet title={tagHeader}></Helmet>
-        <h2 className={blogstyles.title}>{tagHeader}<u>{`${tag}`}</u></h2>
-        <ul className={blogstyles.posts}>
+        <h2 className={`title`}>{tagHeader}<u>{`${tag}`}</u></h2>
+        <ul className={`posts`}>
             {edges.map(({node}) => {
                 const {frontmatter,fields,id} = node
                 const { title,date,thumbnail} = frontmatter
                 const { slug } = fields
                 return(
-                    <li key={id} className={blogstyles.post}>
-                        <Link className={blogstyles.content_wrapper} to ={`/blog/${slug}`} >
+                    <li key={id} className={`post`}>
+                        <Link className={`content_wrapper`} to ={`/blog/${slug}`} >
                         { thumbnail ? <Img fixed={thumbnail.childImageSharp.fixed}/> : null}
-                        <div className={blogstyles.content}>
+                        <div className={`content`}>
                         <h3>{title}</h3>
-                        <p><span className={blogstyles.date}>{date}</span></p>
+                        <p><span className={`date`}>{date}</span></p>
                         </div>
                         </Link>
                     </li>

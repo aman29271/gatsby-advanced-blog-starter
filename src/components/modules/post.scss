@@ -1,0 +1,43 @@
+
+.head_container {
+  display: flex;
+  .head_wrapper {
+    flex: 1 0;
+    padding: 1rem 1rem 1rem 2rem;
+    .head_title {
+      margin-bottom: 6.72px !important;
+    }
+  }
+  .link {
+    text-decoration: none;
+  }
+
+  .tag {
+    color: #5a5a5a;
+    font-size: 0.65rem;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 6px 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    margin-right: 5px;
+    &:hover{
+        // background-color: #e5e5e5;
+        color: #5183f5;
+      }
+  }
+  .date {
+    display: block;
+    font-size: 12px;
+  }
+  .gitlink{
+      color:#000 !important;
+      font-size: 12px;
+      padding: 0.5rem 0.5rem .2rem;
+      padding-inline-start: 0px;
+      font-weight:bold;
+  }
+}
