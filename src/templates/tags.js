@@ -46,7 +46,7 @@ query($tag : String){
                     slug
                 }
                 frontmatter{
-                    title,date(formatString:"dddd, Mo MMMM YYYY")
+                    title,date(formatString:"ddd, Do MMMM YYYY")
                 }
             }
         }

@@ -15,7 +15,7 @@ const BlogPage = () =>{
                 node{
                     id,
                     frontmatter{
-                        title,date(formatString:"dddd, Mo MMMM YYYY"),tags
+                        title,date(formatString:"ddd, Do MMMM YYYY"),tags
                     },
                     fields{
                         slug
