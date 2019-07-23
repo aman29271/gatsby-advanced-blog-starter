@@ -6,7 +6,7 @@ const UserLink = (props)=>{
         <div>
             {props.link.map((link,index)=>{
                 return(
-                    <a href={link.username} className={footerStyles.link} key={index}><span>{link.label}</span></a>
+                    <a href={link.username} target="_blank" rel="noopener noreferrer" className={footerStyles.link} key={index}><span>{link.label}</span></a>
                 )
             })}
         </div>

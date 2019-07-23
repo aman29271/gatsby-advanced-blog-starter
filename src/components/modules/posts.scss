@@ -13,7 +13,17 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     a{
+        color:#2161f2;
         text-decoration: none;
+        border: none;
+        &:active,
+        &:focus{
+            color:#5183f5;
+        }
+        
+    }
+    a:hover{
+        background-color:transparent;
     }
     p{
     font-size: .8rem;

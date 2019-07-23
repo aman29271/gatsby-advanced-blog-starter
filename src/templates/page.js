@@ -4,6 +4,7 @@ import {graphql,Link} from 'gatsby'
 import '../components/modules/post.scss'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import '../styles/page.scss'
 export const query = graphql`
         query(
             $slug: String
@@ -35,8 +36,8 @@ const Blog=(props)=>{
             <div className="head_container">
             { thumbnail ? <Img fixed={thumbnail.childImageSharp.fixed} />: null}
             <div className={`head_wrapper`}>
-            <h2 classname={`head_title`}>{title}</h2>
-            <p><span className={`date`}>{date}</span><span className="gitlink"><a className="link" href={`${gitlink}/${slug}.md`}>Edit on Github</a></span>
+            <h2 className={`head_title`}>{title}</h2>
+            <p><span className={`date`}>{date}</span><span className="gitlink"><a className="link" rel="noopener noreferrer" target="_blank" href={`${gitlink}/${slug}.md` }>Edit on Github</a></span>
             {tags.map((tag,index)=>{
                 return(
                     <Link className={`link`} to={`/tags/${tag}`} key={index}><span className={`tag`}>{tag}</span></Link>

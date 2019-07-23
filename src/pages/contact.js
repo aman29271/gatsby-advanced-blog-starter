@@ -21,10 +21,10 @@ import config from '../../data/siteConfig'
              <h2 className={contactStyle.title}>Stay in touch</h2>
              <p className={contactStyle.subtitle}>You can contact me via email or find me around the web.</p>
              <ul className={contactStyle.list}>
-                 <li>Email: <a className={contactStyle.link} href={`mailto:${data.site.siteMetadata.Email}`}>{data.site.siteMetadata.Email}</a></li>
-                 <li>Github: <a className={contactStyle.link} href={`https://github.com/${data.site.siteMetadata.Github}`}>{data.site.siteMetadata.Github}</a></li>
-                 <li>Twitter: <a className={contactStyle.link} href={`https://twitter.com/${data.site.siteMetadata.Twitter}`}>{data.site.siteMetadata.Twitter}</a></li>
-                 <li>LinkedIn: <a className={contactStyle.link} href={`https://linkedin.com/in/${data.site.siteMetadata.LinkedIn}`}>{data.site.siteMetadata.LinkedIn}</a></li>
+                 <li>Email: <a target="_blank" rel="noopener noreferrer" className={contactStyle.link} href={`mailto:${data.site.siteMetadata.Email}`}>{data.site.siteMetadata.Email}</a></li>
+                 <li>Github: <a target="_blank" rel="noopener noreferrer" className={contactStyle.link} href={`https://github.com/${data.site.siteMetadata.Github}`}>{data.site.siteMetadata.Github}</a></li>
+                 <li>Twitter: <a target="_blank" rel="noopener noreferrer" className={contactStyle.link} href={`https://twitter.com/${data.site.siteMetadata.Twitter}`}>{data.site.siteMetadata.Twitter}</a></li>
+                 <li>LinkedIn: <a target="_blank" rel="noopener noreferrer" className={contactStyle.link} href={`https://linkedin.com/in/${data.site.siteMetadata.LinkedIn}`}>{data.site.siteMetadata.LinkedIn}</a></li>
             </ul>
          </div>
          </Layout>

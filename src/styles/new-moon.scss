@@ -280,8 +280,14 @@ $error: #f2777a;
   /* Inline code */
   
   :not(pre) > code[class*='language-'] {
-    padding: 3px 5px;
+    padding: 5px 3px;
     color: #111111;
+    background: rgba(0, 0, 0, 0.06) !important;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
   }
   
   :not(pre) > code {
@@ -291,8 +297,9 @@ $error: #f2777a;
     font-weight: 400;
     color: #111111;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.06);
-  }
+    background: rgba(0, 0, 0, 0.06) ;
+   
+}
   
   code[class*='language-css'],
   code[class*='language-scss'],
