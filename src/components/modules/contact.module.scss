@@ -1,8 +1,16 @@
-a{
+.link{
     text-decoration: none;
     font-weight: bold;
-    color: #5183f5
+    color: #0000EE;
+    // text-decoration:underline;
+    // text-decoration-color: #5183f5;
+    // -moz-text-decoration-color: #5183f5;
+   // line-height: 1.4;
+   padding-bottom: 2px;
+   border-bottom: 2px solid rgba(81, 131, 245,0.4)
 }
-a:hover{
-    color: #0000EE
+.link:hover{
+    // text-decoration-color: #0000EE;
+    // -moz-text-decoration-color: #0000EE;
+    border-bottom: 2px solid #0000EE;
 }

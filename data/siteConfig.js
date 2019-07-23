@@ -1,5 +1,5 @@
 const config = {
-    siteTitle: "Aman Kumar | A web developer", // Site title.
+    siteTitle: "Aman Kumar | Web developer", // Site title.
     siteShortDesc: "Aman Kumar Web developer",
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
     siteUrl: "", // Domain of your website without pathPrefix.
