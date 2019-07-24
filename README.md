@@ -1,2 +1,2 @@
-# gatsby-bootcamp-project
-My Simple blog site with gatsby 
+# gatsby-react-blog
+My Simple blog site with gatsby with react
