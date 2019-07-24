@@ -2,7 +2,7 @@ const config = {
     siteTitle: "Aman Kumar | Web developer", // Site title.
     siteShortDesc: "Aman Kumar Web developer",
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-    siteUrl: "", // Domain of your website without pathPrefix.
+    siteUrl: "https://www.example.com", // Domain of your website without pathPrefix.
     siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
     siteRss: "/rss.xml", // Path to the RSS file.
     googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
@@ -18,16 +18,16 @@ const config = {
     // Links to social profiles/projects you want to display in the author segment/navigation bar.
     userLinks: [
       {
-        label: "GitHub",
-        username: "https://github.com/aman29271",
+        label: "github",
+        username: "aman29271",
       },
       {
-        label: "Twitter",
-        username: "https://twitter.com/Aman1291aman",
+        label: "twitter",
+        username: "Aman1291aman",
       },
      {
-          label: "LinkedIn",
-          username: "https://linkedin.com/in/aman29271",
+          label: "linkedIn",
+          username: "aman29271",
       }
     ],
     copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.

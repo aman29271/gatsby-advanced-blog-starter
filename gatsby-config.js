@@ -4,15 +4,20 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 const config = require('./data/siteConfig')
+const [github,twitter,linkedin]  = config.userLinks
 module.exports = {
   /* Your site config here */
   siteMetadata:{
     title:config.siteTitle,
     author:config.userName,
     Email:config.userEmail,
-    Github: 'aman29271',
-    Twitter:'Aman1291aman',
-    LinkedIn:'aman29271'
+    githubUsername: github.username,
+    twitterUsername:twitter.username,
+    linkedInUsername:linkedin.username,
+    defaultTitle: config.siteTitle,
+    defaultDescription: config.siteDescription,
+    siteUrl: config.siteUrl,
+    defaultImage: config.siteLogo,
   },
   plugins:[
     'gatsby-plugin-sass',
