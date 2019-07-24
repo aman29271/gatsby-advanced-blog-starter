@@ -18,19 +18,19 @@
   }
 
   .tag {
-    color: #5a5a5a;
+    color: #0366d6;
     font-size: 0.65rem;
-    font-weight: bold;
-    background-color: #f2f2f2;
+    //font-weight: bold;
+    background-color: #f1f8ff;
     padding: 6px 8px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    border-radius: p3x;
+    -webkit-border-radius: p3x;
+    -moz-border-radius: p3x;
+    -ms-border-radius: p3x;
+    -o-border-radius: p3x;
     margin-right: 5px;
     &:hover{
-        color: #5183f5;
+        background-color: #def;
       }
   }
   .date {

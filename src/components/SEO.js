@@ -2,21 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql,StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
-const query = graphql`
-query{
-    site{
-        siteMetadata{
-            defaultTitle title
-            defaultDescription
-            siteUrl
-            defaultImage
-            twitterUsername
-        }
-    }
-}
-`
 const SEO = ({title, description, image, pathname, article})=>{
-    <StaticQuery query={query}  render={({
+    <StaticQuery query={ query }  render={({
         site: {
             siteMetadata:{
                 defaultTitle,
@@ -81,3 +68,16 @@ SEO.defaultProps = {
 }
 
 export default SEO
+const query = graphql`
+query{
+    site{
+        siteMetadata{
+            defaultTitle title
+            defaultDescription
+            siteUrl
+            defaultImage
+            twitterUsername
+        }
+    }
+}
+`
