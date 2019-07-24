@@ -17,7 +17,7 @@ const Header = () => {
             <header>
                 <ul className={headerStyles.list}>
                     <li><Link to="/" className={headerStyles.title} activeClassName={headerStyles.active_nav_list}>{data.site.siteMetadata.author}</Link></li>
-                    <li><Link to="/about" activeClassName={headerStyles.active_nav_list}>About</Link></li>
+                    <li><Link to="/about" activeClassName={headerStyles.active_nav_list}>Me</Link></li>
                     <li><Link to ="/blog" activeClassName={headerStyles.active_nav_list}>Article</Link></li>
                     <li><Link to = "/contact" activeClassName={headerStyles.active_nav_list}>Contact</Link></li>
                 </ul>
