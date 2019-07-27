@@ -15,8 +15,10 @@ tags:
  ```
  Initial input value would be zero and as the user selects file it changes.
  ```js
+//  selecting element
+const el = document.querySelector('input[type=file]')
 //  fire an event handler when the input value changes
-    document.addEventListener('change',function(e){
+    el.addEventListener('change',function(e){
         console.log(e)
     })
  ```
