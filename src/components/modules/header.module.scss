@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 .list {
   list-style-type: none;
   display: flex;
@@ -24,6 +26,8 @@ li:first-child {
   cursor: pointer;
   color: #000;
   font-size: 1.2rem;
+  // font-family: 'Pacifico', cursive;
+  font-family: 'Dancing Script', cursive;
 }
 .active_nav_list {
   color: #0000ee !important;
