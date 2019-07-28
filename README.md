@@ -1,7 +1,6 @@
 # gatsby-react-blog
 My Simple blog site with gatsby with react
 ## Installation
----
 Run local Server:
 ```bash
 git clone https://github.com/aman29271/gatsby-bootcamp-project
