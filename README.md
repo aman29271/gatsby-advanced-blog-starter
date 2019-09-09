@@ -31,7 +31,7 @@ Go to `localhost:8000`
 - lazy loading image with support for blur-up effect
     - dynamically image generation on the basis of bandwidth
 - code scheme (starring [New Moon](https://taniarascia.github.io/new-moon))
-
+    -[Website Theme](www.taniarascia.com)
 ## Configuration
 Edit `/data/site-config.js`.
 ```js
