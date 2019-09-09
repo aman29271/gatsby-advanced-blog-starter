@@ -1,6 +1,6 @@
 const config = {
-    siteTitle: "Aman Kumar | Web developer", // Site title.
-    siteShortDesc: "Aman Kumar Web developer",
+    siteTitle: "Gatsby", // Site title.
+    siteShortDesc: "Gatsby advanced starter blog",
     siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
     siteUrl: "https://www.example.com", // Domain of your website without pathPrefix.
     siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
