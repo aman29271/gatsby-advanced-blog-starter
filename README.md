@@ -71,3 +71,5 @@ const config = {
 ```
 ## Author
 - Aman Kumar
+## License
+- MIT
