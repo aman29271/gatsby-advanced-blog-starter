@@ -9,7 +9,7 @@ const config = {
     postDefaultCategoryID: "Tech", // Default category for posts.
     dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
     dateFormat: "DD/MM/YYYY", // Date format for display.
-    userName: "Aman Kumar", // Username to display in the author segment.
+    userName: "Gatsby", // Username to display in the author segment.
     userEmail: "aman29271@gmail.com", // Email used for RSS feed's author segment
     userLocation: "India", // User location to display in the author segment.
     userAvatar: "", // User avatar to display in the author segment.
@@ -19,7 +19,7 @@ const config = {
     userLinks: [
       {
         label: "github",
-        username: "aman29271",
+        username: "aman29271/gatsby-advanced-blog-starter",
       },
       {
         label: "twitter",
